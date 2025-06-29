@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Markdown content styling */
+.markdown-content {
+  @apply text-sm;
+}
+
+/* Code highlighting styles */
+.markdown-content pre code {
+  @apply text-gray-100;
+}
+
+/* Ensure proper spacing for nested lists */
+.markdown-content ul ul,
+.markdown-content ol ol,
+.markdown-content ul ol,
+.markdown-content ol ul {
+  @apply mt-2 mb-0;
+}
+
+/* Custom scrollbar for code blocks */
+.markdown-content pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.markdown-content pre::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+.markdown-content pre::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded;
+}
+
+.markdown-content pre::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Syntax highlighting theme adjustments */
+.hljs {
+  @apply bg-transparent;
+}
+
+/* Ensure proper contrast for dark mode */
+.dark .markdown-content .hljs-comment,
+.dark .markdown-content .hljs-quote {
+  @apply text-gray-400;
+}
+
+.dark .markdown-content .hljs-keyword,
+.dark .markdown-content .hljs-selector-tag,
+.dark .markdown-content .hljs-literal,
+.dark .markdown-content .hljs-type {
+  @apply text-blue-400;
+}
+
+.dark .markdown-content .hljs-string,
+.dark .markdown-content .hljs-regexp {
+  @apply text-green-400;
+}
+
+.dark .markdown-content .hljs-number {
+  @apply text-orange-400;
+}
+
+.dark .markdown-content .hljs-function,
+.dark .markdown-content .hljs-title {
+  @apply text-yellow-400;
+}
+
+.dark .markdown-content .hljs-variable,
+.dark .markdown-content .hljs-attr {
+  @apply text-purple-400;
+}
